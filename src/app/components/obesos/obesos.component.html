@@ -1,0 +1,12 @@
+<mat-card class="mat-elevation-z4" >
+    <mat-card-header>
+        <mat-card-title>Percentual de obesos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Percentual de obesos entre os homens e as mulheres:</p>
+        <mat-divider></mat-divider>
+        <p *ngFor="let d of data">
+            {{d.sexo}}: {{d.percentual}}%
+        </p>
+    </mat-card-content>
+</mat-card>

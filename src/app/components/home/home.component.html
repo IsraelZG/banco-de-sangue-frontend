@@ -1,0 +1,24 @@
+<div *ngIf="loaded else loading" class="content" fxLayout="row wrap" fxLayoutGap="10px grid">
+    <div fxFlex="33%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <app-lista-estado [data]=candidatosPorEstado></app-lista-estado>
+    </div> 
+    <div fxFlex="66%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <div class="column" fxLayout="row wrap" fxLayoutGap="10px grid">
+            <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+                <app-imc-medio [data]=imcPorIdade></app-imc-medio>
+            </div> 
+            <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+                <app-obesos [data]=obesosPorSexo></app-obesos>
+            </div> 
+            <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+                <app-idade-media [data]=idadePorTipoSanguineo></app-idade-media>
+            </div> 
+            <div fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+                <app-doadores-por-receptor [data]=doadoresPorReceptor></app-doadores-por-receptor>
+            </div> 
+        </div>
+    </div>    
+</div>
+<ng-template #loading>
+    <div class="content">Carregando dados...</div>
+</ng-template>
